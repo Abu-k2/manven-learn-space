@@ -19,8 +19,11 @@ const AboutSection = () => {
             <p className="text-foreground leading-relaxed mb-4">
               <strong className="text-primary">Mission:</strong> To provide a supportive and engaging environment that inspires a love for learning.
             </p>
-            <p className="text-foreground leading-relaxed">
+            <p className="text-foreground leading-relaxed mb-4">
               <strong className="text-primary">Vision:</strong> To be the world class academic champion.
+            </p>
+            <p className="text-foreground leading-relaxed">
+              <strong className="text-primary">Motto:</strong> In God we trust.
             </p>
           </div>
         </div>
