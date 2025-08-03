@@ -20,7 +20,7 @@ const AboutSection = () => {
               <strong className="text-primary">Mission:</strong> To provide a supportive and engaging environment that inspires a love for learning.
             </p>
             <p className="text-foreground leading-relaxed">
-              <strong className="text-primary">Vision:</strong> To empower every child to reach their full potential through holistic education.
+              <strong className="text-primary">Vision:</strong> To be the world class academic champion.
             </p>
           </div>
         </div>
