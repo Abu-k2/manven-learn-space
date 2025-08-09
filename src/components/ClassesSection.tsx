@@ -1,7 +1,10 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { useStaggerAnimation } from "@/hooks/useScrollAnimation";
 
 const ClassesSection = () => {
+  const containerRef = useStaggerAnimation(150);
+  
   const classes = [
     {
       title: 'PP1 (Pre-Primary 1)',
@@ -32,17 +35,17 @@ const ClassesSection = () => {
   return (
     <section id="classes" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold font-poppins text-center mb-16 text-primary animate-fade-in">
+        <h2 className="text-4xl font-bold font-poppins text-center mb-16 text-primary scroll-animate text-gradient">
           Classes Offered
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div ref={containerRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {classes.map((classItem, index) => (
             <Card 
               key={index} 
-              className="text-center hover:shadow-card transition-all duration-300 hover:-translate-y-1 bg-card border-border animate-fade-in"
+              className="text-center stagger-animate shadow-card hover-lift hover-glow transition-all duration-300 bg-card border-border"
             >
               <CardHeader>
-                <CardTitle className="text-xl font-semibold font-poppins text-primary">
+                <CardTitle className="text-xl font-semibold font-poppins text-primary animate-zoom-in">
                   {classItem.title}
                 </CardTitle>
               </CardHeader>
