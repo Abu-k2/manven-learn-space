@@ -76,4 +76,4 @@ export const useStaggerAnimation = (delay: number = 100) => {
   return containerRef;
 };
 
-export default useScrollAnimation;
+export default useScrollAnimation;0

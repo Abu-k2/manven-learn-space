@@ -40,10 +40,10 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-muted">
+    <section id="contact" className="py-20 bg-muted" aria-labelledby="contact-heading">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold font-poppins text-center mb-16 text-primary animate-fade-in">
-          Admissions & Contact
+        <h2 id="contact-heading" className="text-4xl font-bold font-poppins text-center mb-16 text-primary animate-fade-in">
+          Admissions & Contact Information
         </h2>
         <div className="grid lg:grid-cols-2 gap-12">
           <div className="animate-fade-in">
@@ -60,7 +60,7 @@ const ContactSection = () => {
                   </svg>
                   <div>
                     <p className="font-semibold text-primary">Email:</p>
-                    <p className="text-foreground">info@mavenacademy.ac.ke</p>
+                    <p className="text-foreground">admissions@manvenschool.com</p>
                   </div>
                 </div>
                 
@@ -70,7 +70,7 @@ const ContactSection = () => {
                   </svg>
                   <div>
                     <p className="font-semibold text-primary">Phone:</p>
-                    <p className="text-foreground">+254 727134771 / +254 705214149</p>
+                    <p className="text-foreground">+254 727 134 771 / +254 705 214 149</p>
                   </div>
                 </div>
                 
@@ -113,7 +113,8 @@ const ContactSection = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6" aria-labelledby="contact-form-title" role="form">
+                  <h3 id="contact-form-title" className="sr-only">School Admission Application Form</h3>
                   <div>
                     <Label htmlFor="name" className="text-primary font-medium">Parent's Name</Label>
                     <Input

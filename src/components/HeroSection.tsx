@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import heroImage from '@/assets/hero-school.jpg';
+import schoolVideo from '@/assets/school.mp4';
 
 const HeroSection = () => {
   const [selectedInterest, setSelectedInterest] = useState('');
@@ -29,28 +30,39 @@ const HeroSection = () => {
     <section 
       id="home" 
       className="min-h-screen bg-gradient-hero flex items-center justify-center relative overflow-hidden"
-      style={{
-        backgroundImage: `linear-gradient(135deg, rgba(59, 130, 246, 0.9), rgba(37, 99, 235, 0.8)), url(${heroImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
+      aria-labelledby="hero-heading"
+      role="banner"
     >
+      {/* Background Video */}
+      <video 
+        autoPlay 
+        muted 
+        loop 
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        poster={heroImage}
+        aria-label="The Manven School Kimumu campus tour video showcasing our facilities and learning environment"
+      >
+        <source src={schoolVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      
+      {/* Video Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 via-blue-800/60 to-blue-700/70 z-10"></div>
       {/* Floating particles animation */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden z-20">
         <div className="absolute w-4 h-4 bg-white/20 rounded-full animate-float" style={{ top: '20%', left: '10%', animationDelay: '0s' }}></div>
         <div className="absolute w-3 h-3 bg-white/30 rounded-full animate-float" style={{ top: '60%', left: '80%', animationDelay: '1s' }}></div>
         <div className="absolute w-5 h-5 bg-white/15 rounded-full animate-float" style={{ top: '80%', left: '20%', animationDelay: '2s' }}></div>
         <div className="absolute w-2 h-2 bg-white/40 rounded-full animate-float" style={{ top: '30%', left: '70%', animationDelay: '1.5s' }}></div>
       </div>
       
-      <div className="absolute inset-0 bg-black/20"></div>
-      <div className="container mx-auto px-4 text-center relative z-10">
-        <h1 className="text-4xl md:text-6xl font-bold font-poppins text-white mb-6 animate-text-reveal text-gradient">
-          Welcome to The Manven School
+      <div className="container mx-auto px-4 text-center relative z-30">
+        <h1 id="hero-heading" className="text-4xl md:text-6xl font-bold font-poppins text-white mb-6 animate-text-reveal text-gradient">
+          Welcome to The Manven School Kimumu
         </h1>
         <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto animate-slide-up text-shimmer">
-          A nurturing environment for young learners to grow, explore, and thrive.
+          Premier primary education with modern facilities and qualified teachers - A nurturing environment for young learners to grow, explore, and thrive in Eldoret, Kenya.
         </p>
         
         <form onSubmit={handleFormSubmit} className="mt-8 scroll-scale">

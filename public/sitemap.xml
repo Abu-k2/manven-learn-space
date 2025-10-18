@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://manvenschool.com/</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://manvenschool.com/assets/hero-school.jpg</image:loc>
+      <image:title>The Manven School Kimumu Campus</image:title>
+      <image:caption>Beautiful campus of The Manven School Kimumu providing quality primary education</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- About Section -->
+  <url>
+    <loc>https://manvenschool.com/#about</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Classes Section -->
+  <url>
+    <loc>https://manvenschool.com/#classes</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://manvenschool.com/assets/classroom.jpg</image:loc>
+      <image:title>Modern Classroom at Manven School</image:title>
+      <image:caption>Well-equipped classroom with modern learning facilities</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Facilities Section -->
+  <url>
+    <loc>https://manvenschool.com/#facilities</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://manvenschool.com/assets/playground.jpg</image:loc>
+      <image:title>School Playground and Sports Facilities</image:title>
+      <image:caption>Spacious playground and sports facilities for student recreation</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Testimonials Section -->
+  <url>
+    <loc>https://manvenschool.com/#testimonials</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Contact/Admissions Section -->
+  <url>
+    <loc>https://manvenschool.com/#contact</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+</urlset>

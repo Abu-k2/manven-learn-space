@@ -7,45 +7,47 @@ const ClassesSection = () => {
   
   const classes = [
     {
-      title: 'PP1 (Pre-Primary 1)',
-      description: 'Ages 3-4: Introduction to basic skills through play-based learning.',
+      title: 'Early Years (Nursery)',
+      description: 'Ages 3-4: Play-based learning foundation with social skills development, basic motor skills, and early language introduction.',
     },
     {
-      title: 'PP2 (Pre-Primary 2)',
-      description: 'Ages 4-5: Builds on PP1 with early literacy and numeracy.',
+      title: 'Pre-Primary 1 (PP1)',
+      description: 'Ages 4-5: Structured learning with early literacy, numeracy basics, and creative arts in a supportive environment.',
     },
     {
-      title: 'Grade 1',
-      description: 'Ages 5-6: Foundational skills in reading, writing, and math.',
+      title: 'Pre-Primary 2 (PP2)',
+      description: 'Ages 5-6: Advanced pre-school preparation with reading readiness, mathematical concepts, and science exploration.',
     },
     {
-      title: 'Grade 2',
-      description: 'Ages 6-7: Expanding knowledge with more complex subjects.',
+      title: 'Grade 1-3 (Lower Primary)',
+      description: 'Ages 6-9: Core curriculum following Kenyan syllabus with strong foundation in English, Mathematics, and Environmental Studies.',
     },
     {
-      title: 'Grade 3',
-      description: 'Ages 7-8: Preparing for higher education with critical thinking skills.',
+      title: 'Grade 4-6 (Upper Primary)',
+      description: 'Ages 9-12: Advanced primary education with specialized subjects including Science, Social Studies, and creative arts.',
     },
     {
-      title: 'Daycare Services',
-      description: 'Ages 3-8: We offer comprehensive daycare services for all grade levels.',
+      title: 'Grade 7-8 (Junior Secondary)',
+      description: 'Ages 12-14: Transition to competency-based curriculum preparing students for senior secondary education.',
     },
   ];
 
   return (
-    <section id="classes" className="py-20 bg-background">
+    <section id="classes" className="py-20 bg-background" aria-labelledby="classes-heading">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold font-poppins text-center mb-16 text-primary scroll-animate text-gradient">
-          Classes Offered
+        <h2 id="classes-heading" className="text-4xl font-bold font-poppins text-center mb-16 text-primary scroll-animate text-gradient">
+          Academic Programs & Classes
         </h2>
         <div ref={containerRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {classes.map((classItem, index) => (
             <Card 
               key={index} 
               className="text-center stagger-animate shadow-card hover-lift hover-glow transition-all duration-300 bg-card border-border"
+              role="article"
+              aria-labelledby={`class-${index}`}
             >
               <CardHeader>
-                <CardTitle className="text-xl font-semibold font-poppins text-primary animate-zoom-in">
+                <CardTitle id={`class-${index}`} className="text-xl font-semibold font-poppins text-primary animate-zoom-in">
                   {classItem.title}
                 </CardTitle>
               </CardHeader>
